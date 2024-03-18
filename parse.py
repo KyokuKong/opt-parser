@@ -25,7 +25,7 @@ async def get_file_by_path_n_name(path, file_name):
 
 
 async def save_to_json(json_name, dic):
-    with open(f'{json_name}-{opt_name}.json', 'w+', encoding='utf-8') as j:
+    with open(f'{opt_name}-{json_name}.json', 'w+', encoding='utf-8') as j:
         j.write(json.dumps(dic, indent=4, ensure_ascii=False))
         j.close()
 
@@ -61,7 +61,7 @@ async def challenge_parse(path):
             "relaxData": relax_dics
         }
         dics.append(dic)
-    await save_to_json('challenge', dics)
+    await save_to_json('Challenge', dics)
 
 
 async def chara_parse(path):
@@ -79,7 +79,7 @@ async def chara_parse(path):
             "isDisabled": root.find('disable').text
         }
         dics.append(dic)
-    await save_to_json('chara', dics)
+    await save_to_json('Chara', dics)
 
 
 async def run_tasks(tasks):
