@@ -496,7 +496,7 @@ if __name__ == '__main__':
     # 传入路径后检测是否包含指定的文件夹，如包含则在运行列表中加入对应的抽取函数
     task_list = []
 
-    '''if os.path.exists(f'{file_root}/challenge'):
+    if os.path.exists(f'{file_root}/challenge'):
         print('Find challenge dir!')
         task_list.append(challenge_parse(f'{file_root}/challenge'))
     if os.path.exists(f'{file_root}/chara'):
@@ -535,7 +535,6 @@ if __name__ == '__main__':
     if os.path.exists(f'{file_root}/mapTreasure'):
         print('Find mapTreasure dir!')
         task_list.append(map_treasure_parse(f'{file_root}/mapTreasure'))
-        '''
     if os.path.exists(f'{file_root}/music'):
         print('Find music dir!')
         task_list.append(music_parse(f'{file_root}/music'))
